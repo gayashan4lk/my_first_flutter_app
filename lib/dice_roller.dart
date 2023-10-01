@@ -11,8 +11,8 @@ class DiceRoller extends StatefulWidget {
 }
 
 class _DiceRollerState extends State<DiceRoller> {
-  int diceFace = 1;
   final random = Random();
+  int diceFace = 1;
 
   void handleOnPress() {
     setState(() {
