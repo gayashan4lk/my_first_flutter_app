@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
-import 'package:my_first_flutter_app/styled_text.dart';
-
 class DiceRoller extends StatefulWidget {
   const DiceRoller({super.key});
 
@@ -25,17 +23,22 @@ class _DiceRollerState extends State<DiceRoller> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      mainAxisSize: MainAxisSize.min,
       children: [
-        const StyledText('Role a Dice'),
-        Image.asset('assets/images/dice-$diceFace.png', width: 200),
+        const SizedBox(height: 50),
+        Text(
+          "You have rolled #$diceFace",
+          style: const TextStyle(
+            fontSize: 20,
+            color: Colors.white,
+          ),
+        ),
+        const SizedBox(height: 30),
+        SizedBox(
+          height: 220,
+          child: Image.asset('assets/images/dice-$diceFace.png', width: 200),
+        ),
+        const SizedBox(height: 30),
         ElevatedButton(onPressed: handleOnPress, child: const Text("Roll")),
-        TextButton(
-            onPressed: () {
-              print("Button Clicked");
-            },
-            child: const Text("Click Me"))
       ],
     );
   }

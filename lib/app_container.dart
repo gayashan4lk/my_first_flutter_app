@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter_app/dice_roller.dart';
+import 'package:my_first_flutter_app/styled_text.dart';
 
 class AppContainer extends StatelessWidget {
   const AppContainer({super.key, this.gradientColors = const [Colors.lightBlue, Colors.deepPurple]});
@@ -19,7 +20,14 @@ class AppContainer extends StatelessWidget {
         ),
       ),
       child: const Center(
-        child: DiceRoller(),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            StyledText('Role a Dice'),
+            DiceRoller(),
+          ],
+        ),
       ),
     );
   }
