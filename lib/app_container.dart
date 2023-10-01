@@ -24,7 +24,7 @@ class AppContainer extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children: [
-            StyledText('Role a Dice'),
+            StyledText('Roll a Dice'),
             DiceRoller(),
           ],
         ),
