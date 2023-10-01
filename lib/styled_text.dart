@@ -13,7 +13,12 @@ class StyledText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       msg,
-      style: const TextStyle(fontSize: 40, fontWeight: FontWeight.bold, color: Colors.white),
+      textAlign: TextAlign.center,
+      style: const TextStyle(
+        fontSize: 40,
+        fontWeight: FontWeight.bold,
+        color: Colors.white,
+      ),
     );
   }
 }

@@ -19,9 +19,12 @@ class GradientContainer extends StatelessWidget {
         ),
       ),
       child: Center(
-        child: Image.asset(
-          'assets/images/dice-1.png',
-          width: 200,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const StyledText('Role a Dice'),
+            Image.asset('assets/images/dice-1.png', width: 200),
+          ],
         ),
       ),
     );
