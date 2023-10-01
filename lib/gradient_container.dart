@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:my_first_flutter_app/styled_text.dart';
 
 class GradientContainer extends StatelessWidget {
-  const GradientContainer({super.key, this.gradientColors = const [Colors.deepOrange, Colors.purple]});
+  const GradientContainer({super.key, this.gradientColors = const [Colors.lightBlue, Colors.deepPurple]});
+
+  const GradientContainer.yellowTheme({super.key}) : gradientColors = const [Colors.deepOrange, Colors.yellow];
+
+  const GradientContainer.purpleTheme({super.key}) : gradientColors = const [Colors.deepOrange, Colors.purple];
 
   final List<Color> gradientColors;
 
@@ -14,8 +18,11 @@ class GradientContainer extends StatelessWidget {
           colors: gradientColors,
         ),
       ),
-      child: const Center(
-        child: StyledText("Hi,\nGayashan."),
+      child: Center(
+        child: Image.asset(
+          'assets/images/dice-1.png',
+          width: 200,
+        ),
       ),
     );
   }
